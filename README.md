@@ -57,11 +57,4 @@ src/
 - Edit `src/index.ts` to specify the Twitter username you want to scan.
 - The bot will fetch tweets, analyze them, and swap SOL for tokens mentioned in bullish posts.
 
-## Security
 
-- **Never commit your `.env` file or private keys to public repositories.**
-- The `.gitignore` file is set up to prevent this.
-
-## License
-
-MIT
