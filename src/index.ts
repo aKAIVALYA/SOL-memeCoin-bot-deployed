@@ -6,6 +6,13 @@ import { swap } from "./swap";
 
 const SOL_AMOUNT = Math.floor(0.001 * LAMPORTS_PER_SOL);
 
+// Read the Twitter username from the .env file
+const TWITTER_USERNAME = process.env.TWITTER_USERNAME;
+
+if (!TWITTER_USERNAME) {
+  throw new Error("TWITTER_USERNAME is not set in the .env file");
+}
+
 async function main(userName: string) {
   const newTweets = await getTweets(userName);
 
@@ -17,4 +24,4 @@ async function main(userName: string) {
   }
 }
 
-main("BotChrome114342");
+main(TWITTER_USERNAME);
