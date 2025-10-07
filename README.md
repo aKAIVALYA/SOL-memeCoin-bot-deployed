@@ -20,6 +20,26 @@ src/
 .env                           # Store your API keys and secrets here
 .gitignore                     # Ignores node_modules, .env, dist
 ```
+## Architecture
+
+```mermaid
+graph TB
+    A[1. Start Botindex.ts] --> B[2. Fetch Tweetsget-tweets.ts]
+    B --> C[3. Filter RecentLast 1 Hour]
+    C --> D[4. AI Analysisget-token-from-llm.ts]
+    D --> E{5. Token Found?}
+    E -->|Yes| F[6. Validate Address]
+    E -->|No| J[10. End]
+    F --> G[7. Build Swap TXswap.ts]
+    G --> H[8. Sign Transaction]
+    H --> I[9. Send to Solana]
+    I --> J
+    
+    style A fill:#4CAF50
+    style D fill:#FF9800
+    style G fill:#9C27B0
+    style I fill:#14F195
+```
 
 ## Setup
 
