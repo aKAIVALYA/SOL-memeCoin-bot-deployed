@@ -426,6 +426,10 @@ if (fs.existsSync(frontendDistPath)) {
   });
 }
 
-app.listen(PORT, () => {
-  console.log(`API Server running on port ${PORT}`);
-});
+if (process.env.VERCEL !== '1') {
+  app.listen(PORT, () => {
+    console.log(`API Server running on port ${PORT}`);
+  });
+}
+
+export default app;
