@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build --prefix frontend && tsc -b",
+    "build": "npm run build --prefix frontend && tsc -p tsconfig.json",
     "start": "node dist/server.js",
     "dev": "ts-node src/server.ts"
   },
