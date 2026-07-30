@@ -1,5 +1,5 @@
 ---
-title: Sol Meme Bot
+title: Sol MemeCoin bot
 emoji: 🚀
 colorFrom: green
 colorTo: purple
